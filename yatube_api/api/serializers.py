@@ -12,7 +12,7 @@ class PostSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
-        fields = ('__all__')
+        fields = '__all__'
         model = Post
 
 
@@ -25,7 +25,7 @@ class CommentSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
-        fields = ('__all__')
+        fields = '__all__'
         model = Comment
         read_only_fields = ('post',)
 
@@ -34,7 +34,7 @@ class GroupSerializer(serializers.ModelSerializer):
     """Группы serializer"""
 
     class Meta:
-        fields = ('__all__')
+        fields = '__all__'
         model = Group
 
 
@@ -57,7 +57,7 @@ class FollowSerializer(serializers.ModelSerializer):
         return data
 
     class Meta:
-        fields = ('__all__')
+        fields = '__all__'
         model = Follow
         validators = (
             validators.UniqueTogetherValidator(
