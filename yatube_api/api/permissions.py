@@ -6,6 +6,7 @@ class UserPermission(permissions.BasePermission):
     Кастомное разрешение на редактирование,
     удаление определенного объекта
     """
+
     def has_permission(self, request, view):
         return (
             request.method in permissions.SAFE_METHODS
